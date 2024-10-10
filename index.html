@@ -178,12 +178,12 @@
               <h2>Delete Account</h2>
               <div class="input-box">
                 <label>Phone Number</label>
-                <input type="number" name="" />
+                <input type="number"  id="phone"  name="" />
               </div>
 
               <div class="input-box">
                 <label>Email</label>
-                <input type="email"  name="" />
+                <input type="email" id="email" name="" />
               </div>
 
               <!-- <div class="input-box">
@@ -228,6 +228,15 @@
         event.preventDefault(); // Prevent the default form submission
         const loader = document.getElementById("loader-delete"); // Change ID here
         const toast = document.getElementById("toastdelete");
+
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+
+    // Check if at least one field is filled
+    if (!phone && !email) {
+        alert("Please fill in at least one of the fields: Phone Number or Email.");
+        return; // Stop the function if both are empty
+    }
 
         // Show the loader
         loader.style.display = "block";
