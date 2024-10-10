@@ -196,6 +196,28 @@ section {
     animation: fadein 0.5s, fadeout 0.5s 1s; /* Fade in and out */
 }
 
+.toastdelete {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #4caf50; /* Green */
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+.toastdelete.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 1s; /* Fade in and out */
+}
+
+
 .loader {
     display: none;
     border: 8px solid #f3f3f3; /* Light grey */
